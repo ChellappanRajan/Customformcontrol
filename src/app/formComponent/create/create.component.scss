@@ -1,0 +1,26 @@
+.flex{
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__child {
+        flex:1;
+        max-width: 50%;
+        padding: 20px;
+        border: 2px solid rgba(0, 181, 204, 1);
+        ul li{
+            text-align: center;
+            list-style-type: none;
+            border: 1px solid rgba(44, 62, 80, 1);
+            display: inline;
+            padding: 5px;
+            cursor: pointer;
+        }
+        li:hover {
+            background: rgba(77, 19, 209, 1);
+            color:#fefefe;
+        }
+    }
+    
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'customformcontrol';
+  form= new FormGroup({
+    toggle: new FormControl('',[Validators.required])
+    // food:new FormControl('', [Validators.required])
+  });
 }

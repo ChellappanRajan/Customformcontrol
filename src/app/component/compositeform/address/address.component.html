@@ -1,0 +1,53 @@
+<div [formGroup]="addressForm" >
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03">City</label>
+      <input type="text" class="form-control" (blur)="onTouched()" 
+      id="validationCustom03" placeholder="City" 
+      formControlName="city" >
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom04">State</label>
+      <input type="text" class="form-control" 
+      id="validationCustom04" placeholder="State"
+      (blur)="onTouched()" 
+      formControlName="state" >
+      <div class="invalid-feedback">
+        Please provide a valid state.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom05">Zip</label>
+      <input type="text" class="form-control"
+       id="validationCustom05" placeholder="Zip" 
+       (blur)="onTouched()" 
+       formControlName="zip">
+      <div class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input formControlName="terms"
+       class="form-check-input"
+        type="checkbox" 
+        (blur)="onTouched()" 
+        id="invalidCheck" >
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+</div>
+
+{{addressForm.valid}}
+{{addressForm.status}}
+
+{{addressForm.get('terms').errors | json}}

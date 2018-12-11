@@ -1,0 +1,13 @@
+<h1 class="text-primary">Composite Form</h1>
+
+<hr>
+
+<form class="needs-validation" [formGroup]="form" (ngSubmit)="onSumit()" >
+  <app-general formControlName="general" ></app-general>
+  <app-address formControlName="address" ></app-address>   
+  <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+
+{{form.value | json}}
+{{form.valid}}
+{{form.status}}

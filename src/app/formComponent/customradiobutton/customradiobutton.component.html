@@ -1,0 +1,16 @@
+<h1>Custom Form Control Using ControlValueAccessor</h1>
+<span>
+  <span>
+    <i class="far fa-circle" (click)="toggle('Yes')" [ngClass]="{'fas fa-dot-circle': isToggle==='Yes' ? true: false}" >Yes</i>
+ </span>
+ 
+ &nbsp; &nbsp; &nbsp;
+ 
+ <span>
+   <i class="far fa-circle" (click)="toggle('No')" [ngClass]="{'fas fa-dot-circle': isToggle==='No' ? true : false}" >No</i>
+ </span>
+</span>
+
+formValid:{{control.valid}}
+formValue:{{control.value | json}}
+
